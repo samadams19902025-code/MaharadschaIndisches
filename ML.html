@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maharadscha · Best Indian Restaurant in Leipzig</title>
+<meta name="description" content="Maharadscha — authentic Indian cuisine in the heart of Leipzig. Traditional recipes, generous spices, customizable heat. Butter Chicken, Biryani, Naan. ★ 4.7 on Google. Dine in, takeaway or order on Wolt." />
+<meta name="keywords" content="Indian Restaurant Leipzig, Authentic Indian Food Leipzig, Maharadscha Leipzig, Butter Chicken Leipzig, Best Indian Restaurant Leipzig, Indisches Restaurant Leipzig" />
+<meta name="author" content="Maharadscha Indisches Restaurant" />
+<link rel="canonical" href="https://maharadscha-leipzig.de/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Maharadscha · Authentic Indian Restaurant in Leipzig" />
+<meta property="og:description" content="The real taste of India in the heart of Leipzig. Traditional recipes, generous spices, your heat level. ★ 4.7 on Google." />
+<meta property="og:image" content="assets/butter-chicken.png" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:site_name" content="Maharadscha Leipzig" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --saffron: #D4890F;
+    --saffron-light: #E8B547;
+    --saffron-deep: #A56500;
+    --burgundy: #8B1A1A;
+    --burgundy-deep: #5C1010;
+    --cream: #FBF5EB;
+    --cream-soft: #FFF8F0;
+    --paper: #F4EBDA;
+    --charcoal: #2A2620;
+    --charcoal-soft: #3D372F;
+    --teal: #1A5C5E;
+    --ink: #1F1B16;
+    --line: rgba(42, 38, 32, .12);
+    --line-strong: rgba(42, 38, 32, .22);
+    --f-display: "Cormorant Garamond", "Times New Roman", serif;
+    --f-body: "DM Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--f-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--cream-soft);
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  h1, h2, h3, h4 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    color: var(--charcoal);
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.005em;
+  }
+  h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); }
+  h3 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+  p { margin: 0; }
+
+  .wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
+
+  /* ======= Decorative primitives ======= */
+  .eyebrow {
+    font-family: var(--f-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--saffron-deep);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    height: 1px; width: 28px;
+    background: currentColor; opacity: 0.5;
+  }
+
+  .ornament {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    color: var(--saffron); margin: 18px auto 28px;
+  }
+  .ornament .line { height: 1px; width: 64px; background: currentColor; opacity: 0.5; }
+  .ornament svg { flex: none; }
+
+  /* ======= NAV ======= */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
+    padding: 22px 0;
+  }
+  .nav.scrolled {
+    background: rgba(251, 245, 235, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 var(--line);
+    padding: 14px 0;
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .brand { display: flex; flex-direction: column; gap: 2px; color: var(--cream); transition: color .3s; }
+  .nav.scrolled .brand { color: var(--charcoal); }
+  .brand-mark {
+    font-family: var(--f-display);
+    font-weight: 500; font-size: 1.65rem; letter-spacing: 0.04em; line-height: 1;
+  }
+  .brand-sub {
+    font-size: 0.62rem; letter-spacing: 0.34em; text-transform: uppercase; opacity: 0.75; font-weight: 500;
+  }
+  .nav-links { display: flex; gap: 30px; align-items: center; color: var(--cream); transition: color .3s; }
+  .nav.scrolled .nav-links { color: var(--charcoal); }
+  .nav-links a { font-size: 0.85rem; letter-spacing: 0.06em; font-weight: 500; position: relative; padding: 6px 0; }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 1px; background: var(--saffron); transform: scaleX(0); transform-origin: center;
+    transition: transform .25s ease;
+  }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .nav-cta {
+    background: var(--saffron); color: var(--cream-soft);
+    padding: 11px 22px; border-radius: 999px;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em;
+    transition: background .2s, transform .2s, box-shadow .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav-cta:hover { background: var(--saffron-deep); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(165,101,0,.3); }
+
+  @media (max-width: 880px) { .nav-links { display: none; } }
+  @media (max-width: 480px) { .brand-sub { display: none; } }
+
+  /* ======= HERO ======= */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    color: var(--cream-soft); overflow: hidden;
+    padding: 140px 0 110px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background-image: url("assets/butter-chicken.png");
+    background-size: cover; background-position: center 30%;
+    transform: scale(1.04);
+  }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 55%, rgba(42, 16, 6, 0.45) 0%, rgba(20, 10, 4, 0.82) 100%),
+      linear-gradient(180deg, rgba(20, 10, 4, 0.55) 0%, rgba(20, 10, 4, 0.3) 38%, rgba(20, 10, 4, 0.85) 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; text-align: center; max-width: 880px; margin: 0 auto; }
+  .hero-eyebrow { color: var(--saffron-light); margin-bottom: 28px; justify-content: center; }
+  .hero h1 {
+    font-family: var(--f-display); font-weight: 500;
+    color: var(--cream-soft);
+    font-size: clamp(3.5rem, 9.5vw, 7.8rem);
+    line-height: 0.95; letter-spacing: 0.005em;
+  }
+  .hero h1 .accent { color: var(--saffron-light); font-style: italic; font-weight: 400; }
+  .hero-tagline {
+    font-family: var(--f-display); font-style: italic; font-weight: 400;
+    font-size: clamp(1.2rem, 2.1vw, 1.7rem);
+    color: rgba(255, 248, 240, 0.94);
+    max-width: 600px; margin: 24px auto 36px; line-height: 1.4;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 10px 20px;
+    background: rgba(212, 137, 15, 0.16);
+    border: 1px solid rgba(232, 181, 71, 0.5);
+    border-radius: 999px;
+    color: var(--cream-soft);
+    font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em;
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    margin-bottom: 38px;
+  }
+  .badge .stars { color: var(--saffron-light); letter-spacing: 1.5px; }
+  .badge .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--saffron-light); opacity: 0.65; }
+
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 30px; border-radius: 3px;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+  }
+  .btn-primary {
+    background: var(--saffron); color: var(--cream-soft);
+    box-shadow: 0 6px 22px rgba(212, 137, 15, 0.4);
+  }
+  .btn-primary:hover { background: var(--saffron-light); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(212, 137, 15, 0.5); }
+  .btn-ghost { background: transparent; color: var(--cream-soft); border: 1px solid rgba(255, 248, 240, 0.45); }
+  .btn-ghost:hover { background: rgba(255, 248, 240, 0.08); border-color: var(--cream-soft); }
+  .btn-dark { background: var(--charcoal); color: var(--cream-soft); }
+  .btn-dark:hover { background: var(--burgundy); transform: translateY(-2px); }
+  .btn-outline { background: transparent; border: 1px solid var(--charcoal); color: var(--charcoal); }
+  .btn-outline:hover { background: var(--charcoal); color: var(--cream-soft); }
+  .btn svg { width: 14px; height: 14px; }
+
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    color: rgba(255, 248, 240, 0.65);
+    font-size: 0.62rem; letter-spacing: 0.34em; text-transform: uppercase;
+    z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .hero-scroll .line {
+    width: 1px; height: 36px; background: currentColor;
+    animation: scrollLine 2.6s ease-in-out infinite; transform-origin: top;
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(0.3); opacity: 0.4; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+
+  /* ======= SECTIONS ======= */
+  .section { padding: 110px 0; position: relative; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+  .section-head .eyebrow { justify-content: center; margin-bottom: 22px; }
+  .section-head p {
+    font-family: var(--f-display); font-style: italic; font-size: 1.2rem;
+    color: var(--charcoal-soft); margin-top: 18px; max-width: 580px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ======= STORY ======= */
+  .story { background: var(--cream); }
+  .story-grid {
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 80px; align-items: center;
+  }
+  @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; gap: 50px; } }
+  .story-text h2 { margin-bottom: 28px; }
+  .story-text h2 .it { font-style: italic; color: var(--burgundy); font-weight: 400; }
+  .story-text .lead {
+    font-family: var(--f-display); font-size: 1.4rem; font-style: italic;
+    color: var(--charcoal-soft); margin-bottom: 24px; line-height: 1.4;
+  }
+  .story-text p { margin-bottom: 18px; color: var(--charcoal-soft); }
+  .signature {
+    font-family: var(--f-display); font-style: italic; font-size: 1.5rem;
+    color: var(--burgundy); margin-top: 28px;
+  }
+  .signature small {
+    display: block; font-family: var(--f-body); font-style: normal;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--charcoal-soft); margin-top: 6px;
+  }
+
+  .story-images {
+    position: relative; aspect-ratio: 4/5;
+  }
+  .story-images .img-a, .story-images .img-b {
+    position: absolute; border-radius: 2px; overflow: hidden;
+    box-shadow: 0 18px 48px rgba(60, 30, 10, 0.22);
+  }
+  .story-images .img-a {
+    inset: 0 30% 25% 0;
+    background: url("assets/interior.png") center/cover;
+  }
+  .story-images .img-b {
+    inset: 35% 0 0 40%;
+    background: url("assets/entrance.png") center/cover;
+    border: 6px solid var(--cream);
+  }
+  .story-images .frame {
+    position: absolute; right: -14px; bottom: -14px;
+    width: 60%; aspect-ratio: 1;
+    border: 1px solid var(--saffron); border-radius: 2px;
+    z-index: -1;
+  }
+
+  /* ======= FEATURES STRIP ======= */
+  .features {
+    background: var(--charcoal); color: var(--cream-soft);
+    padding: 70px 0;
+  }
+  .features-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  }
+  @media (max-width: 820px) { .features-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; } }
+  .feature { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+  .feature-ico {
+    width: 56px; height: 56px;
+    border: 1px solid var(--saffron); border-radius: 50%;
+    display: grid; place-items: center; color: var(--saffron-light);
+  }
+  .feature h4 {
+    font-family: var(--f-display); font-size: 1.3rem; font-weight: 500;
+    color: var(--cream-soft); margin: 0;
+  }
+  .feature p { font-size: 0.88rem; color: rgba(255, 248, 240, 0.72); line-height: 1.5; }
+
+  /* ======= MENU ======= */
+  .menu { background: var(--cream-soft); }
+  .menu-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  }
+  @media (max-width: 900px) { .menu-grid { grid-template-columns: 1fr; gap: 22px; } }
+
+  .dish {
+    background: var(--cream); border-radius: 2px; overflow: hidden;
+    display: flex; flex-direction: column;
+    border: 1px solid var(--line);
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  .dish:hover { transform: translateY(-4px); box-shadow: 0 22px 42px rgba(60, 30, 10, 0.13); }
+  .dish-img {
+    aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative;
+  }
+  .dish-img.ph {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    background: linear-gradient(150deg, var(--paper), #ecdcbf);
+    color: var(--saffron-deep);
+  }
+  .dish-img.ph svg { width: 52px; height: 52px; opacity: 0.7; }
+  .dish-img.ph .ph-cap {
+    font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--charcoal-soft); opacity: 0.75; font-weight: 500;
+  }
+  .dish-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--cream); color: var(--saffron-deep);
+    padding: 6px 12px; font-size: 0.66rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    border-radius: 999px;
+  }
+  .dish-tag.veg { color: var(--teal); }
+  .dish-tag.spicy { color: var(--burgundy); }
+  .dish-body { padding: 26px 26px 28px; }
+  .dish h3 {
+    font-size: 1.45rem; margin-bottom: 4px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  }
+  .dish-price { font-family: var(--f-display); font-size: 1.2rem; color: var(--saffron-deep); white-space: nowrap; }
+  .dish-sub {
+    font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--saffron-deep); font-weight: 500; margin-bottom: 14px;
+  }
+  .dish-desc { color: var(--charcoal-soft); font-size: 0.93rem; line-height: 1.55; }
+  .heat {
+    display: inline-flex; gap: 3px; margin-top: 14px;
+    font-size: 0.7rem; color: var(--burgundy); letter-spacing: 0.5px;
+    align-items: center;
+  }
+  .heat::before { content: "Heat"; font-family: var(--f-body); font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--charcoal-soft); margin-right: 8px; }
+  .heat .pip { width: 7px; height: 9px; background: var(--burgundy); clip-path: polygon(50% 0, 100% 35%, 80% 100%, 20% 100%, 0 35%); opacity: 0.25; }
+  .heat .pip.on { opacity: 1; }
+
+  .menu-cta { text-align: center; margin-top: 56px; }
+
+  /* ======= EXPERIENCE / GALLERY ======= */
+  .experience {
+    background: var(--burgundy-deep); color: var(--cream-soft);
+    position: relative; overflow: hidden;
+  }
+  .experience .section-head .eyebrow { color: var(--saffron-light); }
+  .experience .section-head h2 { color: var(--cream-soft); }
+  .experience .section-head h2 .it { color: var(--saffron-light); }
+  .experience .section-head p { color: rgba(255, 248, 240, 0.78); }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px 220px;
+    gap: 14px;
+  }
+  .gallery .tile {
+    background-size: cover; background-position: center;
+    border-radius: 2px; overflow: hidden; position: relative;
+    transition: transform .4s ease;
+  }
+  .gallery .tile::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(20, 10, 4, 0.6));
+    opacity: 0; transition: opacity .3s;
+  }
+  .gallery .tile:hover { transform: scale(1.02); }
+  .gallery .tile:hover::after { opacity: 1; }
+  .gallery .tile span {
+    position: absolute; bottom: 16px; left: 18px;
+    color: var(--cream-soft); font-family: var(--f-display); font-style: italic;
+    font-size: 1.1rem; opacity: 0; transition: opacity .3s; z-index: 1;
+  }
+  .gallery .tile:hover span { opacity: 1; }
+  .gallery .t1 { grid-column: 1 / span 2; grid-row: 1; background-image: url("assets/exterior-terrace.png"); }
+  .gallery .t2 { grid-column: 3; grid-row: 1; background-image: url("assets/cocktails.png"); }
+  .gallery .t3 { grid-column: 4; grid-row: 1 / span 2; background-image: url("assets/tikka-platter.png"); }
+  .gallery .t4 { grid-column: 1; grid-row: 2; background-image: url("assets/beer-elephant.png"); }
+  .gallery .t5 { grid-column: 2 / span 2; grid-row: 2; background-image: url("assets/biryani-spread.png"); }
+
+  @media (max-width: 820px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 180px); }
+    .gallery .t1 { grid-column: 1 / span 2; grid-row: 1; }
+    .gallery .t2 { grid-column: 1; grid-row: 2; }
+    .gallery .t3 { grid-column: 2; grid-row: 2; }
+    .gallery .t4 { grid-column: 1; grid-row: 3; }
+    .gallery .t5 { grid-column: 2; grid-row: 3; }
+  }
+
+  /* ======= TESTIMONIALS ======= */
+  .reviews { background: var(--paper); }
+  .review-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  @media (max-width: 900px) { .review-grid { grid-template-columns: 1fr; } }
+  .review {
+    background: var(--cream-soft); padding: 36px 32px 32px;
+    border-radius: 2px; border: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .review .quote-mark {
+    font-family: var(--f-display); font-size: 4.5rem; line-height: 0.6;
+    color: var(--saffron); height: 28px;
+  }
+  .review p {
+    font-family: var(--f-display); font-size: 1.18rem; font-style: italic;
+    color: var(--charcoal); line-height: 1.5; flex: 1;
+  }
+  .review-meta { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--saffron); color: var(--cream-soft);
+    display: grid; place-items: center;
+    font-family: var(--f-display); font-size: 1.15rem;
+  }
+  .review-meta .who { font-weight: 600; font-size: 0.92rem; color: var(--charcoal); }
+  .review-meta .where { font-size: 0.75rem; color: var(--charcoal-soft); letter-spacing: 0.06em; }
+  .review .stars { color: var(--saffron); letter-spacing: 2px; font-size: 0.9rem; }
+
+  .review-bar {
+    display: flex; align-items: center; justify-content: center; gap: 28px;
+    margin-top: 56px; padding: 22px 28px;
+    background: var(--cream-soft);
+    border: 1px solid var(--line); border-radius: 999px;
+    flex-wrap: wrap;
+  }
+  .review-bar strong { font-family: var(--f-display); font-size: 1.5rem; color: var(--charcoal); font-weight: 500; }
+  .review-bar .stars { color: var(--saffron); font-size: 1rem; letter-spacing: 2px; }
+  .review-bar small { font-size: 0.78rem; color: var(--charcoal-soft); letter-spacing: 0.04em; }
+
+  /* ======= RESERVE STRIP ======= */
+  .reserve {
+    position: relative; overflow: hidden;
+    padding: 90px 0; color: var(--cream-soft); text-align: center;
+  }
+  .reserve-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: url("assets/cocktails.png") center/cover;
+  }
+  .reserve-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20, 10, 4, 0.78), rgba(91, 16, 16, 0.82));
+  }
+  .reserve-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .reserve h2 { color: var(--cream-soft); margin-bottom: 18px; }
+  .reserve h2 .it { color: var(--saffron-light); font-style: italic; font-weight: 400; }
+  .reserve p {
+    font-family: var(--f-display); font-style: italic; font-size: 1.3rem;
+    color: rgba(255, 248, 240, 0.9); margin-bottom: 36px;
+  }
+
+  /* ======= VISIT ======= */
+  .visit { background: var(--cream-soft); }
+  .visit-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  @media (max-width: 880px) { .visit-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  .visit-info h2 { margin-bottom: 24px; }
+  .visit-info h2 .it { font-style: italic; color: var(--burgundy); font-weight: 400; }
+  .info-block { padding: 22px 0; border-top: 1px solid var(--line); display: flex; gap: 22px; }
+  .info-block:last-child { border-bottom: 1px solid var(--line); }
+  .info-ico {
+    width: 42px; height: 42px; flex: none;
+    background: var(--cream); border-radius: 50%;
+    color: var(--saffron-deep);
+    display: grid; place-items: center;
+  }
+  .info-label { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--charcoal-soft); margin-bottom: 6px; }
+  .info-val { font-family: var(--f-display); font-size: 1.25rem; color: var(--charcoal); line-height: 1.35; }
+  .info-val small { display: block; font-family: var(--f-body); font-size: 0.85rem; color: var(--charcoal-soft); margin-top: 3px; letter-spacing: 0; text-transform: none; }
+  .info-val a { color: inherit; transition: color .2s; }
+  .info-val a:hover { color: var(--saffron-deep); }
+
+  .hours-list { width: 100%; }
+  .hours-list .row {
+    display: flex; justify-content: space-between; padding: 7px 0; font-size: 0.95rem;
+    color: var(--charcoal-soft);
+  }
+  .hours-list .row.today { color: var(--burgundy); font-weight: 600; }
+  .hours-list .row span:last-child { font-variant-numeric: tabular-nums; }
+
+  .map-card {
+    border-radius: 2px; overflow: hidden; background: var(--cream);
+    border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(60, 30, 10, 0.1);
+    display: flex; flex-direction: column;
+  }
+  .map-img {
+    flex: 1; min-height: 380px;
+    background:
+      linear-gradient(135deg, rgba(212, 137, 15, 0.08), rgba(139, 26, 26, 0.05)),
+      url("assets/exterior-terrace.png") center/cover;
+    position: relative;
+  }
+  .map-pin {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -100%);
+    width: 44px; height: 44px;
+    background: var(--burgundy); color: var(--cream-soft);
+    border-radius: 50% 50% 50% 2px;
+    transform: translate(-50%, -100%) rotate(-45deg);
+    display: grid; place-items: center;
+    box-shadow: 0 8px 20px rgba(91, 16, 16, 0.45);
+  }
+  .map-pin svg { transform: rotate(45deg); }
+  .map-foot {
+    padding: 18px 22px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    background: var(--cream-soft);
+  }
+  .map-foot strong { font-family: var(--f-display); font-size: 1.1rem; color: var(--charcoal); font-weight: 500; }
+  .map-foot small { font-size: 0.82rem; color: var(--charcoal-soft); }
+  .map-foot a { color: var(--saffron-deep); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+
+  /* ======= FOOTER ======= */
+  footer {
+    background: var(--ink); color: rgba(255, 248, 240, 0.75);
+    padding: 70px 0 30px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  @media (max-width: 520px) { .foot-grid { grid-template-columns: 1fr; } }
+  .foot-brand .brand-mark { color: var(--cream-soft); font-size: 1.8rem; }
+  .foot-brand .brand-sub { color: var(--saffron-light); }
+  .foot-brand p { margin-top: 18px; font-size: 0.92rem; line-height: 1.6; max-width: 320px; }
+  .foot-col h5 {
+    font-family: var(--f-body); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--saffron-light); margin: 0 0 18px;
+  }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .foot-col li a { font-size: 0.92rem; transition: color .2s; }
+  .foot-col li a:hover { color: var(--saffron-light); }
+
+  .socials { display: flex; gap: 12px; margin-top: 14px; }
+  .social {
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid rgba(255, 248, 240, 0.2);
+    display: grid; place-items: center;
+    color: rgba(255, 248, 240, 0.85);
+    transition: border-color .2s, color .2s, background .2s;
+  }
+  .social:hover { border-color: var(--saffron); color: var(--saffron-light); background: rgba(212, 137, 15, 0.1); }
+
+  .foot-bot {
+    padding-top: 28px; border-top: 1px solid rgba(255, 248, 240, 0.1);
+    display: flex; justify-content: space-between; gap: 18px;
+    font-size: 0.78rem; color: rgba(255, 248, 240, 0.5);
+    flex-wrap: wrap;
+  }
+  .foot-bot a { color: inherit; opacity: 0.8; }
+  .foot-bot a:hover { opacity: 1; color: var(--saffron-light); }
+
+  /* ======= HAMBURGER + MOBILE MENU ======= */
+  .nav-actions { display: flex; align-items: center; gap: 14px; }
+  .hamburger {
+    display: none; width: 42px; height: 42px;
+    align-items: center; justify-content: center;
+    color: var(--cream); border-radius: 50%;
+    transition: color .3s, background .2s;
+  }
+  .nav.scrolled .hamburger { color: var(--charcoal); }
+  .hamburger:hover { background: rgba(212,137,15,0.12); }
+  .hamburger svg { width: 24px; height: 24px; }
+  .mobile-menu {
+    display: none; flex-direction: column;
+    background: var(--cream-soft);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 18px 40px rgba(60,30,10,0.18);
+    padding: 10px 0 18px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    padding: 15px 32px; font-size: 1rem; font-weight: 500;
+    color: var(--charcoal); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .mobile-menu a:active { background: var(--paper); }
+  .mobile-menu .mm-cta {
+    margin: 16px 32px 0; padding: 15px 20px; border-radius: 4px;
+    background: var(--saffron); color: var(--cream-soft);
+    justify-content: center; border-bottom: none; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.82rem;
+  }
+  .mobile-menu .mm-cta.wolt { background: var(--teal); margin-top: 10px; }
+  @media (max-width: 880px) { .hamburger { display: inline-flex; } }
+
+  /* ======= AUTHENTICITY BANNER ======= */
+  .authenticity {
+    background: var(--saffron); color: var(--ink);
+    padding: 84px 0; position: relative; overflow: hidden;
+  }
+  .authenticity::before, .authenticity::after {
+    content: "\201C"; position: absolute;
+    font-family: var(--f-display); font-size: 22rem; line-height: 1;
+    color: rgba(255,248,240,0.18);
+  }
+  .authenticity::before { top: -40px; left: 24px; }
+  .authenticity::after { content: "\201D"; bottom: -150px; right: 24px; }
+  .authenticity .quote-inner { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; text-align: center; }
+  .authenticity blockquote {
+    margin: 0; font-family: var(--f-display); font-weight: 500;
+    font-size: clamp(1.7rem, 3.4vw, 2.9rem); line-height: 1.25;
+    color: var(--burgundy-deep); letter-spacing: -0.01em;
+  }
+  .authenticity cite {
+    display: block; margin-top: 26px; font-family: var(--f-body);
+    font-style: normal; font-size: 0.78rem; letter-spacing: 0.24em;
+    text-transform: uppercase; color: rgba(92,16,16,0.8); font-weight: 600;
+  }
+
+  /* ======= FLOATING CALL BUTTON ======= */
+  .float-call {
+    position: fixed; right: 22px; bottom: 22px; z-index: 60;
+    display: inline-flex; align-items: center; gap: 10px;
+    height: 58px; padding: 0 22px 0 18px;
+    background: var(--burgundy); color: var(--cream-soft);
+    border-radius: 999px; font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    box-shadow: 0 10px 28px rgba(91,16,16,0.42);
+    transition: transform .2s, background .2s, box-shadow .2s;
+  }
+  .float-call:hover { background: var(--burgundy-deep); transform: translateY(-2px); box-shadow: 0 14px 34px rgba(91,16,16,0.5); }
+  .float-call svg { width: 22px; height: 22px; }
+  .float-call .fc-ring {
+    position: absolute; inset: 0; border-radius: 999px;
+    border: 2px solid var(--burgundy);
+    animation: fcpulse 2.4s ease-out infinite; pointer-events: none;
+  }
+  @keyframes fcpulse {
+    0% { opacity: 0.6; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.35); }
+  }
+  @media (max-width: 520px) {
+    .float-call .fc-label { display: none; }
+    .float-call { height: 56px; width: 56px; padding: 0; justify-content: center; }
+  }
+
+  /* ======= REVEAL ANIMATIONS ======= */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: .08s; }
+  .reveal.d2 { transition-delay: .16s; }
+  .reveal.d3 { transition-delay: .24s; }
+  .reveal.d4 { transition-delay: .32s; }
+</style>
+</head>
+<body>
+
+<!-- ====================== NAV ====================== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Maharadscha home">
+      <span class="brand-mark">Maharadscha</span>
+      <span class="brand-sub">Indian · Leipzig</span>
+    </a>
+    <div class="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#experience">Experience</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:+4934124754773" class="nav-cta">
+        Reserve
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#story">Our Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#experience">Experience</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit &amp; Hours</a>
+    <a class="mm-cta" href="tel:+4934124754773">Call to Reserve</a>
+    <a class="mm-cta wolt" href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer">Order on Wolt</a>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <div class="badge">
+      <span class="stars">★★★★★</span>
+      <span class="dot"></span>
+      <span>4.7 on Google · 800+ Reviews</span>
+    </div>
+    <p class="eyebrow hero-eyebrow">Authentic · Traditional · Spiced to your taste</p>
+    <h1>The real taste<br/>of <span class="accent">India.</span></h1>
+    <p class="hero-tagline">Authentic Indian cuisine in the heart of Leipzig — traditional recipes, generously spiced, and prepared to exactly the heat you want.</p>
+    <div class="cta-row">
+      <a href="tel:+4934124754773" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
+        Reserve a Table
+      </a>
+      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Order on Wolt</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- ====================== STORY ====================== -->
+<section class="section story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-text reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2 style="margin-top:18px">Not fusion.<br/><span class="it">The real thing.</span></h2>
+      <p class="lead">Authentic Indian cooking — nothing toned down, nothing reinvented for unfamiliar palates.</p>
+      <p>At Maharadscha, we cook the way it's cooked in India. Whole spices, ground generously. A tandoor that runs hot through lunch and dinner. Naan shaped by hand and lentils that simmer for hours.</p>
+      <p>And the heat is yours to choose — from gentle and fragrant to genuinely fiery. Just tell us how brave you're feeling. Vegetarian, vegan and meat dishes share the same table, because traditional Indian cooking has always celebrated vegetables.</p>
+      <p class="signature">— The Maharadscha Family
+        <small>Waldstraße · Leipzig</small>
+      </p>
+    </div>
+    <div class="story-images reveal d2">
+      <div class="img-a"></div>
+      <div class="img-b"></div>
+      <div class="frame"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FEATURES STRIP ====================== -->
+<section class="features">
+  <div class="wrap features-grid">
+    <div class="feature reveal">
+      <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg></div>
+      <h4>Authentic Recipes</h4>
+      <p>Three generations of Punjabi cooking, untouched and unfiltered.</p>
+    </div>
+    <div class="feature reveal d1">
+      <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+      <h4>Spiced to You</h4>
+      <p>Mild, medium, fiery — every dish meets your taste, not the other way around.</p>
+    </div>
+    <div class="feature reveal d2">
+      <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14c2-3 4-3 8-3s6 0 8 3M6 18h12"/><circle cx="12" cy="6" r="2"/></svg></div>
+      <h4>Tandoor Fired Daily</h4>
+      <p>Clay-oven breads and meats with that unmistakable smoky char.</p>
+    </div>
+    <div class="feature reveal d3">
+      <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l4 4 10-10"/></svg></div>
+      <h4>Vegan & Veg Friendly</h4>
+      <p>Half the menu is plant-based — and proudly so.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== MENU ====================== -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Signatures</span>
+      <h2 style="margin-top:22px">Dishes our guests<br/><em style="font-weight:400;color:var(--burgundy)">come back for.</em></h2>
+      <p>A small selection from the menu — the ones we've been asked the recipe for, more than once.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="dish reveal">
+        <div class="dish-img" style="background-image:url('assets/butter-chicken.png');">
+          <span class="dish-tag spicy">House Favourite</span>
+        </div>
+        <div class="dish-body">
+          <h3>Butter Chicken</h3>
+          <div class="dish-sub">Murgh Makhani</div>
+          <p class="dish-desc">The king of curries. Tender chicken in a rich, velvety tomato-cream sauce.</p>
+          <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+        </div>
+      </article>
+
+      <article class="dish reveal d1">
+        <div class="dish-img" style="background-image:url('assets/biryani-spread.png');">
+          <span class="dish-tag spicy">Slow-Cooked</span>
+        </div>
+        <div class="dish-body">
+          <h3>Lamb Biryani</h3>
+          <div class="dish-sub">Gosht Biryani</div>
+          <p class="dish-desc">Fragrant basmati rice layered with slow-cooked spiced lamb. A feast in a pot.</p>
+          <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span></div>
+        </div>
+      </article>
+
+      <article class="dish reveal d2">
+        <div class="dish-img" style="background-image:url('assets/paneer-rice.png');">
+          <span class="dish-tag veg">Vegetarian</span>
+        </div>
+        <div class="dish-body">
+          <h3>Paneer Tikka Masala</h3>
+          <div class="dish-sub">Paneer Tikka Masala</div>
+          <p class="dish-desc">Smoky grilled paneer in a bold, aromatic masala. The vegetarian star.</p>
+          <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-cta reveal">
+      <a href="https://maharadscha-leipzig.de/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        See the Full Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== AUTHENTICITY BANNER ====================== -->
+<section class="authenticity">
+  <div class="wrap quote-inner reveal">
+    <blockquote>When the international community in Leipzig recommends one Indian restaurant above all others &mdash; you know it's the real thing.</blockquote>
+    <cite>The authenticity test — passed, again and again</cite>
+  </div>
+</section>
+
+<!-- ====================== EXPERIENCE / GALLERY ====================== -->
+<section class="section experience" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--saffron-light)">The Room</span>
+      <h2 style="margin-top:22px">Warm light, low music,<br/><span class="it">the smell of cardamom.</span></h2>
+      <p>From the terrace under the lanterns to a quiet corner inside — Maharadscha was designed to feel like an evening at home, in a house you've never been to.</p>
+    </div>
+
+    <div class="gallery reveal d1">
+      <div class="tile t1"><span>Terrace, summer evenings</span></div>
+      <div class="tile t2"><span>House cocktails</span></div>
+      <div class="tile t3"><span>Tandoor platter</span></div>
+      <div class="tile t4"><span>Indian Pale Ale</span></div>
+      <div class="tile t5"><span>Sharing the table</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TESTIMONIALS ====================== -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Guest Book</span>
+      <h2 style="margin-top:22px">What Leipzig<br/><em style="font-weight:400;color:var(--burgundy);font-style:italic">is saying.</em></h2>
+    </div>
+
+    <div class="review-grid">
+      <article class="review reveal">
+        <span class="quote-mark">“</span>
+        <p>The best Indian restaurant in Leipzig. We tried Kadhai Chicken, Chicken Tikka Masala and naan. The Gulab Jamun was hot and flavourful. It reminded me of India — an absolute must-try.</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">A</div>
+          <div>
+            <div class="who">Anushruti D.</div>
+            <div class="where">Google Review · English</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review reveal d1">
+        <span class="quote-mark">“</span>
+        <p>I ordered the chicken curry and asked them to adjust the spice level. It's the best I've had in a long time — full of flavour, with spices used generously. The waiter was lovely too.</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">N</div>
+          <div>
+            <div class="who">Natalia C.</div>
+            <div class="where">Google Review · English</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review reveal d2">
+        <span class="quote-mark">“</span>
+        <p>Amazing food! I loved the prawn masala curry and was given great advice on the spice levels. Our waiter was friendly and we had a real chat. Highly recommend.</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">P</div>
+          <div>
+            <div class="who">Pim D.</div>
+            <div class="where">Google Review · English</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review reveal">
+        <span class="quote-mark">“</span>
+        <p>Wir haben uns wegen der guten Bewertungen für dieses indische Restaurant entschieden und ein hervorragendes vegetarisches Abendessen genossen.</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">R</div>
+          <div>
+            <div class="who">Robert B.</div>
+            <div class="where">Google Bewertung · Deutsch</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review reveal d1">
+        <span class="quote-mark">“</span>
+        <p>By far the best Indian restaurant in Leipzig. Delicious food, outstanding and friendly service. We love both dining in and ordering for delivery. Highly recommended!</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">N</div>
+          <div>
+            <div class="who">Neha B.</div>
+            <div class="where">Google Review · English</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="review reveal d2">
+        <span class="quote-mark">“</span>
+        <p>Alles war fantastisch und lecker — das beste indische Restaurant, in dem wir seit Langem waren. Großzügige Portionen, einfach klasse. Danke!</p>
+        <div class="stars">★★★★★</div>
+        <div class="review-meta">
+          <div class="avatar">T</div>
+          <div>
+            <div class="who">Tanja D.</div>
+            <div class="where">Google Bewertung · Deutsch</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="review-bar reveal">
+      <div>
+        <span class="stars">★★★★★</span>
+        <strong style="margin-left:10px">4.7</strong>
+      </div>
+      <small>800+ reviews on Google</small>
+      <a href="https://www.google.com/maps/search/Maharadscha+Indisches+Restaurant+Waldstraße+5+Leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:10px 18px;font-size:0.72rem;">Read All Reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== RESERVE STRIP ====================== -->
+<section class="reserve" id="reserve">
+  <div class="reserve-bg"></div>
+  <div class="wrap reserve-inner">
+    <span class="eyebrow" style="color:var(--saffron-light);justify-content:center">Reserve</span>
+    <h2 style="margin-top:20px">A table is waiting<br/><span class="it">with your name on it.</span></h2>
+    <p>Walk-ins welcome — but for weekends, terrace seats and groups, reservations are recommended.</p>
+    <div class="cta-row">
+      <a href="tel:+4934124754773" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
+        Call +49 341 24754773
+      </a>
+      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Order on Wolt</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== VISIT ====================== -->
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Find Us</span>
+      <h2 style="margin-top:22px">Visit Maharadscha<br/><em style="font-weight:400;color:var(--burgundy);font-style:italic">in central Leipzig.</em></h2>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <div class="info-block">
+          <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <div>
+            <div class="info-label">Address</div>
+            <div class="info-val">Waldstraße 5, 04105 Leipzig
+              <small>In the Waldstraßenviertel · Tram to Waldplatz, right by the stop</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div style="flex:1">
+            <div class="info-label">Opening Hours</div>
+            <div class="hours-list">
+              <div class="row" data-days="1,2,3,4,5"><span>Monday – Friday</span><span>10:30–15:00 · 16:30–23:00</span></div>
+              <div class="row" data-days="6,0"><span>Saturday – Sunday</span><span>11:30–23:00</span></div>
+            </div>
+            <p style="margin-top:12px;font-size:0.85rem;color:var(--charcoal-soft)">Lunch and dinner. Reservations recommended for groups.</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="info-label">Reservations &amp; Contact</div>
+            <div class="info-val"><a href="tel:+4934124754773">+49 341 24754773</a>
+              <small><a href="mailto:info@maharadscha-leipzig.de">info@maharadscha-leipzig.de</a></small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-card reveal d2">
+        <iframe
+          title="Map showing Maharadscha at Waldstraße 5, 04105 Leipzig"
+          src="https://maps.google.com/maps?q=Maharadscha%20Indisches%20Restaurant%2C%20Waldstra%C3%9Fe%205%2C%2004105%20Leipzig&output=embed"
+          width="100%" style="border:0;flex:1;min-height:380px;display:block;"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-foot">
+          <div>
+            <strong>Maharadscha</strong>
+            <small style="display:block">Waldstraße 5, 04105 Leipzig</small>
+          </div>
+          <a href="https://www.google.com/maps/search/Maharadscha+Indisches+Restaurant+Waldstraße+5+Leipzig" target="_blank" rel="noopener noreferrer">Open in Maps &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand-mark">Maharadscha</div>
+        <div class="brand-sub">Indian · Leipzig</div>
+        <p>Authentic Indian cuisine in the heart of Leipzig — traditional recipes, generously spiced, served the way it's made in India.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/search/top?q=Maharadscha%20Leipzig" target="_blank" rel="noopener noreferrer" class="social" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.google.com/maps/search/Maharadscha+Indisches+Restaurant+Waldstraße+5+Leipzig" target="_blank" rel="noopener noreferrer" class="social" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+          <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="social" aria-label="Order on Wolt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M3 7h4l2 9h8l2-6H8"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#experience">The Room</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Opening Hours</h5>
+        <ul>
+          <li>Mon – Fri</li>
+          <li>10:30–15:00 · 16:30–23:00</li>
+          <li style="margin-top:6px">Sat – Sun</li>
+          <li>11:30–23:00</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+4934124754773">+49 341 24754773</a></li>
+          <li><a href="mailto:info@maharadscha-leipzig.de">info@maharadscha-leipzig.de</a></li>
+          <li>Waldstraße 5, 04105 Leipzig</li>
+          <li><a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer">Order on Wolt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Maharadscha Indisches Restaurant · Leipzig</span>
+      <span>
+        <a href="https://maharadscha-leipzig.de/" target="_blank" rel="noopener noreferrer">Impressum</a> ·
+        <a href="https://maharadscha-leipzig.de/" target="_blank" rel="noopener noreferrer">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================== FLOATING CALL BUTTON ====================== -->
+<a class="float-call" href="tel:+4934124754773" aria-label="Call Maharadscha to reserve a table">
+  <span class="fc-ring"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
+  <span class="fc-label">Reserve</span>
+</a>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Subtle hero parallax
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight && heroBg) {
+      heroBg.style.transform = `scale(1.04) translateY(${y * 0.18}px)`;
+    }
+  }, { passive: true });
+
+  // Reveal-on-scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Mobile hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = () => { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); };
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Highlight today's opening hours
+  const today = new Date().getDay(); // 0 = Sun … 6 = Sat
+  document.querySelectorAll('.hours-list .row[data-days]').forEach(row => {
+    const days = row.getAttribute('data-days').split(',').map(Number);
+    if (days.includes(today)) row.classList.add('today');
+  });
+</script>
+
+</body>
+</html>
