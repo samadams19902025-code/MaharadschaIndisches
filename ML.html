@@ -1167,6 +1167,37 @@
     if (days.includes(today)) row.classList.add('today');
   });
 </script>
+<script>
+  document.querySelector('a[href="tel:+4934124754773"].nav-cta')
+    ?.addEventListener('click', () => plausible('Reserve Click - Nav'));
 
+  document.querySelector('a[href="tel:+4934124754773"].btn-primary')
+    ?.addEventListener('click', () => plausible('Reserve Click - Hero'));
+
+  document.querySelector('a[href*="wolt"].btn-ghost')
+    ?.addEventListener('click', () => plausible('Wolt Click - Hero'));
+
+  document.querySelector('a.mm-cta[href="tel:+4934124754773"]')
+    ?.addEventListener('click', () => plausible('Reserve Click - Mobile Menu'));
+
+  document.querySelector('a.mm-cta.wolt')
+    ?.addEventListener('click', () => plausible('Wolt Click - Mobile Menu'));
+
+  document.querySelector('.reserve a.btn-primary')
+    ?.addEventListener('click', () => plausible('Reserve Click - Section'));
+
+  document.querySelector('.reserve a.btn-ghost')
+    ?.addEventListener('click', () => plausible('Wolt Click - Section'));
+
+  document.querySelector('.float-call')
+    ?.addEventListener('click', () => plausible('Reserve Click - Float Button'));
+
+  document.querySelector('.review-bar a.btn-outline')
+    ?.addEventListener('click', () => plausible('Reviews Click - Google Maps'));
+
+  document.querySelector('.map-foot a')
+    ?.addEventListener('click', () => plausible('Maps Click - Visit Section'));
+</script>
+  
 </body>
 </html>
