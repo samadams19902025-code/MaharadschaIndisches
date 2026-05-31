@@ -25,7 +25,6 @@
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
   </script>
-
 </head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +32,6 @@
 <meta name="description" content="Maharadscha — authentic Indian cuisine in the heart of Leipzig. Traditional recipes, generous spices, customizable heat. Butter Chicken, Biryani, Naan. ★ 4.7 on Google. Dine in, takeaway or order on Wolt." />
 <meta name="keywords" content="Indian Restaurant Leipzig, Authentic Indian Food Leipzig, Maharadscha Leipzig, Butter Chicken Leipzig, Best Indian Restaurant Leipzig, Indisches Restaurant Leipzig" />
 <meta name="author" content="Maharadscha Indisches Restaurant" />
-<link rel="canonical" href="https://maharadscha-leipzig.de/" />
 
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Maharadscha · Authentic Indian Restaurant in Leipzig" />
@@ -636,6 +634,21 @@
   .mobile-menu .mm-cta.wolt { background: var(--teal); margin-top: 10px; }
   @media (max-width: 880px) { .hamburger { display: inline-flex; } }
 
+  /* ======= LANGUAGE TOGGLE ======= */
+  .lang-toggle {
+    display: inline-flex; border: 1px solid currentColor; border-radius: 999px;
+    overflow: hidden; color: var(--cream); transition: color .3s;
+  }
+  .nav.scrolled .lang-toggle { color: var(--charcoal); }
+  .lang-toggle button {
+    padding: 7px 11px; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.1em; color: inherit; background: transparent;
+    transition: background .2s, color .2s; line-height: 1;
+  }
+  .lang-toggle button.active { background: var(--saffron); color: var(--cream-soft); }
+  html[lang="de"] .heat::before { content: "Sch\00E4rfe"; }
+  @media (max-width: 560px) { .nav-cta { display: none; } }
+
   /* ======= AUTHENTICITY BANNER ======= */
   .authenticity {
     background: var(--saffron); color: var(--ink);
@@ -703,18 +716,23 @@
   <div class="wrap nav-inner">
     <a href="#top" class="brand" aria-label="Maharadscha home">
       <span class="brand-mark">Maharadscha</span>
-      <span class="brand-sub">Indian · Leipzig</span>
+      <span class="brand-sub" data-i18n="brandSub">Indian · Leipzig</span>
     </a>
     <div class="nav-links">
-      <a href="#story">Our Story</a>
-      <a href="#menu">Menu</a>
-      <a href="#experience">Experience</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#visit">Visit</a>
+      <a href="#story" data-i18n="nav.story">Our Story</a>
+      <a href="#menu" data-i18n="nav.menu">
+</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#visit" data-i18n="nav.visit">Visit</a>
     </div>
     <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="de">DE</button>
+      </div>
       <a href="tel:+4934124754773" class="nav-cta">
-        Reserve
+        <span data-i18n="nav.reserve">Reserve</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -723,13 +741,13 @@
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#story">Our Story</a>
-    <a href="#menu">Menu</a>
-    <a href="#experience">Experience</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#visit">Visit &amp; Hours</a>
-    <a class="mm-cta" href="tel:+4934124754773">Call to Reserve</a>
-    <a class="mm-cta wolt" href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer">Order on Wolt</a>
+    <a href="#story" data-i18n="nav.story">Our Story</a>
+    <a href="#menu" data-i18n="nav.menu">Menu</a>
+    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+    <a href="#visit" data-i18n="nav.visitHours">Visit &amp; Hours</a>
+    <a class="mm-cta" href="tel:+4934124754773" data-i18n="nav.callReserve">Call to Reserve</a>
+    <a class="mm-cta wolt" href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" data-i18n="cta.orderWolt">Order on Wolt</a>
   </div>
 </nav>
 
@@ -740,21 +758,21 @@
     <div class="badge">
       <span class="stars">★★★★★</span>
       <span class="dot"></span>
-      <span>4.7 on Google · 800+ Reviews</span>
+      <span data-i18n="hero.badge">4.7 on Google · 800+ Reviews</span>
     </div>
-    <p class="eyebrow hero-eyebrow">Authentic · Traditional · Spiced to your taste</p>
-    <h1>The real taste<br/>of <span class="accent">India.</span></h1>
-    <p class="hero-tagline">Authentic Indian cuisine in the heart of Leipzig — traditional recipes, generously spiced, and prepared to exactly the heat you want.</p>
+    <p class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">Authentic · Traditional · Spiced to your taste</p>
+    <h1 data-i18n="hero.h1">The real taste<br/>of <span class="accent">India.</span></h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">Authentic Indian cuisine in the heart of Leipzig — traditional recipes, generously spiced, and prepared to exactly the heat you want.</p>
     <div class="cta-row">
       <a href="tel:+4934124754773" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
-        Reserve a Table
+        <span data-i18n="hero.reserveBtn">Reserve a Table</span>
       </a>
-      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Order on Wolt</a>
+      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="cta.orderWolt">Order on Wolt</a>
     </div>
   </div>
   <div class="hero-scroll">
-    <span>Scroll</span>
+    <span data-i18n="hero.scroll">Scroll</span>
     <div class="line"></div>
   </div>
 </header>
@@ -763,12 +781,12 @@
 <section class="section story" id="story">
   <div class="wrap story-grid">
     <div class="story-text reveal">
-      <span class="eyebrow">Our Story</span>
-      <h2 style="margin-top:18px">Not fusion.<br/><span class="it">The real thing.</span></h2>
-      <p class="lead">Authentic Indian cooking — nothing toned down, nothing reinvented for unfamiliar palates.</p>
-      <p>At Maharadscha, we cook the way it's cooked in India. Whole spices, ground generously. A tandoor that runs hot through lunch and dinner. Naan shaped by hand and lentils that simmer for hours.</p>
-      <p>And the heat is yours to choose — from gentle and fragrant to genuinely fiery. Just tell us how brave you're feeling. Vegetarian, vegan and meat dishes share the same table, because traditional Indian cooking has always celebrated vegetables.</p>
-      <p class="signature">— The Maharadscha Family
+      <span class="eyebrow" data-i18n="story.eyebrow">Our Story</span>
+      <h2 style="margin-top:18px" data-i18n="story.h2">Not fusion.<br/><span class="it">The real thing.</span></h2>
+      <p class="lead" data-i18n="story.lead">Authentic Indian cooking — nothing toned down, nothing reinvented for unfamiliar palates.</p>
+      <p data-i18n="story.p1">At Maharadscha, we cook the way it's cooked in India. Whole spices, ground generously. A tandoor that runs hot through lunch and dinner. Naan shaped by hand and lentils that simmer for hours.</p>
+      <p data-i18n="story.p2">And the heat is yours to choose — from gentle and fragrant to genuinely fiery. Just tell us how brave you're feeling. Vegetarian, vegan and meat dishes share the same table, because traditional Indian cooking has always celebrated vegetables.</p>
+      <p class="signature"><span data-i18n="story.sig">— The Maharadscha Family</span>
         <small>Waldstraße · Leipzig</small>
       </p>
     </div>
@@ -785,23 +803,23 @@
   <div class="wrap features-grid">
     <div class="feature reveal">
       <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg></div>
-      <h4>Authentic Recipes</h4>
-      <p>Three generations of Punjabi cooking, untouched and unfiltered.</p>
+      <h4 data-i18n="feat1.t">Authentic Recipes</h4>
+      <p data-i18n="feat1.d">Traditional recipes, fresh ingredients, generous spices — the way it's made in India.</p>
     </div>
     <div class="feature reveal d1">
       <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
-      <h4>Spiced to You</h4>
-      <p>Mild, medium, fiery — every dish meets your taste, not the other way around.</p>
+      <h4 data-i18n="feat2.t">Spiced to You</h4>
+      <p data-i18n="feat2.d">Mild, medium or fiery — every dish is prepared to your taste.</p>
     </div>
     <div class="feature reveal d2">
       <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14c2-3 4-3 8-3s6 0 8 3M6 18h12"/><circle cx="12" cy="6" r="2"/></svg></div>
-      <h4>Tandoor Fired Daily</h4>
-      <p>Clay-oven breads and meats with that unmistakable smoky char.</p>
+      <h4 data-i18n="feat3.t">Tandoor Fired Daily</h4>
+      <p data-i18n="feat3.d">Clay-oven breads and meats with that unmistakable smoky char.</p>
     </div>
     <div class="feature reveal d3">
       <div class="feature-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l4 4 10-10"/></svg></div>
-      <h4>Vegan & Veg Friendly</h4>
-      <p>Half the menu is plant-based — and proudly so.</p>
+      <h4 data-i18n="feat4.t">Vegan &amp; Veg Friendly</h4>
+      <p data-i18n="feat4.d">Vegetarian, vegan and meat dishes — all welcome at the same table.</p>
     </div>
   </div>
 </section>
@@ -810,54 +828,47 @@
 <section class="section menu" id="menu">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Signatures</span>
-      <h2 style="margin-top:22px">Dishes our guests<br/><em style="font-weight:400;color:var(--burgundy)">come back for.</em></h2>
-      <p>A small selection from the menu — the ones we've been asked the recipe for, more than once.</p>
+      <span class="eyebrow" data-i18n="menu.eyebrow">Signatures</span>
+      <h2 style="margin-top:22px" data-i18n="menu.h2">Dishes our guests<br/><em style="font-weight:400;color:var(--burgundy)">come back for.</em></h2>
+      <p data-i18n="menu.sub">A small selection from the menu — the ones we've been asked the recipe for, more than once.</p>
     </div>
 
     <div class="menu-grid">
       <article class="dish reveal">
         <div class="dish-img" style="background-image:url('assets/butter-chicken.png');">
-          <span class="dish-tag spicy">House Favourite</span>
+          <span class="dish-tag spicy" data-i18n="tag.favourite">House Favourite</span>
         </div>
         <div class="dish-body">
           <h3>Butter Chicken</h3>
           <div class="dish-sub">Murgh Makhani</div>
-          <p class="dish-desc">The king of curries. Tender chicken in a rich, velvety tomato-cream sauce.</p>
+          <p class="dish-desc" data-i18n="dish.butter">The king of curries. Tender chicken in a rich, velvety tomato-cream sauce.</p>
           <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
         </div>
       </article>
 
       <article class="dish reveal d1">
         <div class="dish-img" style="background-image:url('assets/biryani-spread.png');">
-          <span class="dish-tag spicy">Slow-Cooked</span>
+          <span class="dish-tag spicy" data-i18n="tag.slow">Slow-Cooked</span>
         </div>
         <div class="dish-body">
           <h3>Lamb Biryani</h3>
           <div class="dish-sub">Gosht Biryani</div>
-          <p class="dish-desc">Fragrant basmati rice layered with slow-cooked spiced lamb. A feast in a pot.</p>
+          <p class="dish-desc" data-i18n="dish.biryani">Fragrant basmati rice layered with slow-cooked spiced lamb. A feast in a pot.</p>
           <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span></div>
         </div>
       </article>
 
       <article class="dish reveal d2">
         <div class="dish-img" style="background-image:url('assets/paneer-rice.png');">
-          <span class="dish-tag veg">Vegetarian</span>
+          <span class="dish-tag veg" data-i18n="tag.veg">Vegetarian</span>
         </div>
         <div class="dish-body">
           <h3>Paneer Tikka Masala</h3>
           <div class="dish-sub">Paneer Tikka Masala</div>
-          <p class="dish-desc">Smoky grilled paneer in a bold, aromatic masala. The vegetarian star.</p>
+          <p class="dish-desc" data-i18n="dish.paneer">Smoky grilled paneer in a bold, aromatic masala. The vegetarian star.</p>
           <div class="heat"><span class="pip on"></span><span class="pip on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
         </div>
       </article>
-    </div>
-
-    <div class="menu-cta reveal">
-      <a href="https://maharadscha-leipzig.de/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-        See the Full Menu
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
     </div>
   </div>
 </section>
@@ -865,8 +876,8 @@
 <!-- ====================== AUTHENTICITY BANNER ====================== -->
 <section class="authenticity">
   <div class="wrap quote-inner reveal">
-    <blockquote>When the international community in Leipzig recommends one Indian restaurant above all others &mdash; you know it's the real thing.</blockquote>
-    <cite>The authenticity test — passed, again and again</cite>
+    <blockquote data-i18n="auth.quote">When the international community in Leipzig recommends one Indian restaurant above all others &mdash; you know it's the real thing.</blockquote>
+    <cite data-i18n="auth.cite">The authenticity test — passed, again and again</cite>
   </div>
 </section>
 
@@ -874,17 +885,17 @@
 <section class="section experience" id="experience">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow" style="color:var(--saffron-light)">The Room</span>
-      <h2 style="margin-top:22px">Warm light, low music,<br/><span class="it">the smell of cardamom.</span></h2>
-      <p>From the terrace under the lanterns to a quiet corner inside — Maharadscha was designed to feel like an evening at home, in a house you've never been to.</p>
+      <span class="eyebrow" style="color:var(--saffron-light)" data-i18n="exp.eyebrow">The Room</span>
+      <h2 style="margin-top:22px" data-i18n="exp.h2">Warm light, low music,<br/><span class="it">the smell of cardamom.</span></h2>
+      <p data-i18n="exp.p">From the terrace under the lanterns to a quiet corner inside — Maharadscha was designed to feel like an evening at home, in a house you've never been to.</p>
     </div>
 
     <div class="gallery reveal d1">
-      <div class="tile t1"><span>Terrace, summer evenings</span></div>
-      <div class="tile t2"><span>House cocktails</span></div>
-      <div class="tile t3"><span>Tandoor platter</span></div>
-      <div class="tile t4"><span>Indian Pale Ale</span></div>
-      <div class="tile t5"><span>Sharing the table</span></div>
+      <div class="tile t1"><span data-i18n="g1">Terrace, summer evenings</span></div>
+      <div class="tile t2"><span data-i18n="g2">House cocktails</span></div>
+      <div class="tile t3"><span data-i18n="g3">Tandoor platter</span></div>
+      <div class="tile t4"><span data-i18n="g4">A cold beer</span></div>
+      <div class="tile t5"><span data-i18n="g5">Sharing the table</span></div>
     </div>
   </div>
 </section>
@@ -893,85 +904,85 @@
 <section class="section reviews" id="reviews">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Guest Book</span>
-      <h2 style="margin-top:22px">What Leipzig<br/><em style="font-weight:400;color:var(--burgundy);font-style:italic">is saying.</em></h2>
+      <span class="eyebrow" data-i18n="rev.eyebrow">Guest Book</span>
+      <h2 style="margin-top:22px" data-i18n="rev.h2">What Leipzig<br/><em style="font-weight:400;color:var(--burgundy);font-style:italic">is saying.</em></h2>
     </div>
 
     <div class="review-grid">
       <article class="review reveal">
         <span class="quote-mark">“</span>
-        <p>The best Indian restaurant in Leipzig. We tried Kadhai Chicken, Chicken Tikka Masala and naan. The Gulab Jamun was hot and flavourful. It reminded me of India — an absolute must-try.</p>
+        <p data-i18n="rev.r1">The best Indian restaurant in Leipzig. We tried Kadhai Chicken, Chicken Tikka Masala and naan. The Gulab Jamun was hot and flavourful. It reminded me of India — an absolute must-try.</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">A</div>
           <div>
             <div class="who">Anushruti D.</div>
-            <div class="where">Google Review · English</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
 
       <article class="review reveal d1">
         <span class="quote-mark">“</span>
-        <p>I ordered the chicken curry and asked them to adjust the spice level. It's the best I've had in a long time — full of flavour, with spices used generously. The waiter was lovely too.</p>
+        <p data-i18n="rev.r2">I ordered the chicken curry and asked them to adjust the spice level. It's the best I've had in a long time — full of flavour, with spices used generously. The waiter was lovely too.</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">N</div>
           <div>
             <div class="who">Natalia C.</div>
-            <div class="where">Google Review · English</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
 
       <article class="review reveal d2">
         <span class="quote-mark">“</span>
-        <p>Amazing food! I loved the prawn masala curry and was given great advice on the spice levels. Our waiter was friendly and we had a real chat. Highly recommend.</p>
+        <p data-i18n="rev.r3">Amazing food! I loved the prawn masala curry and was given great advice on the spice levels. Our waiter was friendly and we had a real chat. Highly recommend.</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">P</div>
           <div>
             <div class="who">Pim D.</div>
-            <div class="where">Google Review · English</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
 
       <article class="review reveal">
         <span class="quote-mark">“</span>
-        <p>Wir haben uns wegen der guten Bewertungen für dieses indische Restaurant entschieden und ein hervorragendes vegetarisches Abendessen genossen.</p>
+        <p data-i18n="rev.r4">Wir haben uns wegen der guten Bewertungen für dieses indische Restaurant entschieden und ein hervorragendes vegetarisches Abendessen genossen.</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">R</div>
           <div>
             <div class="who">Robert B.</div>
-            <div class="where">Google Bewertung · Deutsch</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
 
       <article class="review reveal d1">
         <span class="quote-mark">“</span>
-        <p>By far the best Indian restaurant in Leipzig. Delicious food, outstanding and friendly service. We love both dining in and ordering for delivery. Highly recommended!</p>
+        <p data-i18n="rev.r5">By far the best Indian restaurant in Leipzig. Delicious food, outstanding and friendly service. We love both dining in and ordering for delivery. Highly recommended!</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">N</div>
           <div>
             <div class="who">Neha B.</div>
-            <div class="where">Google Review · English</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
 
       <article class="review reveal d2">
         <span class="quote-mark">“</span>
-        <p>Alles war fantastisch und lecker — das beste indische Restaurant, in dem wir seit Langem waren. Großzügige Portionen, einfach klasse. Danke!</p>
+        <p data-i18n="rev.r6">Alles war fantastisch und lecker — das beste indische Restaurant, in dem wir seit Langem waren. Großzügige Portionen, einfach klasse. Danke!</p>
         <div class="stars">★★★★★</div>
         <div class="review-meta">
           <div class="avatar">T</div>
           <div>
             <div class="who">Tanja D.</div>
-            <div class="where">Google Bewertung · Deutsch</div>
+            <div class="where" data-i18n="rev.source">Google Review</div>
           </div>
         </div>
       </article>
@@ -982,8 +993,8 @@
         <span class="stars">★★★★★</span>
         <strong style="margin-left:10px">4.7</strong>
       </div>
-      <small>800+ reviews on Google</small>
-      <a href="https://www.google.com/maps/search/Maharadscha+Indisches+Restaurant+Waldstraße+5+Leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:10px 18px;font-size:0.72rem;">Read All Reviews</a>
+      <small data-i18n="rev.barCount">800+ reviews on Google</small>
+      <a href="https://www.google.com/maps/search/Maharadscha+Indisches+Restaurant+Waldstraße+5+Leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:10px 18px;font-size:0.72rem;" data-i18n="rev.readAll">Read All Reviews</a>
     </div>
   </div>
 </section>
@@ -992,15 +1003,15 @@
 <section class="reserve" id="reserve">
   <div class="reserve-bg"></div>
   <div class="wrap reserve-inner">
-    <span class="eyebrow" style="color:var(--saffron-light);justify-content:center">Reserve</span>
-    <h2 style="margin-top:20px">A table is waiting<br/><span class="it">with your name on it.</span></h2>
-    <p>Walk-ins welcome — but for weekends, terrace seats and groups, reservations are recommended.</p>
+    <span class="eyebrow" style="color:var(--saffron-light);justify-content:center" data-i18n="res.eyebrow">Reserve</span>
+    <h2 style="margin-top:20px" data-i18n="res.h2">A table is waiting<br/><span class="it">with your name on it.</span></h2>
+    <p data-i18n="res.p">Walk-ins welcome — but for weekends, terrace seats and groups, reservations are recommended.</p>
     <div class="cta-row">
       <a href="tel:+4934124754773" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></svg>
-        Call +49 341 24754773
+        <span data-i18n="res.callBtn">Call +49 341 24754773</span>
       </a>
-      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Order on Wolt</a>
+      <a href="https://wolt.com/en/deu/leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="cta.orderWolt">Order on Wolt</a>
     </div>
   </div>
 </section>
@@ -1084,7 +1095,7 @@
         <h5>Explore</h5>
         <ul>
           <li><a href="#story">Our Story</a></li>
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="#menu"></a></li>
           <li><a href="#experience">The Room</a></li>
           <li><a href="#reviews">Reviews</a></li>
         </ul>
@@ -1198,6 +1209,5 @@
   document.querySelector('.map-foot a')
     ?.addEventListener('click', () => plausible('Maps Click - Visit Section'));
 </script>
-  
 </body>
 </html>
